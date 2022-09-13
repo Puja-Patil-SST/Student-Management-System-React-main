@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 
-
 function Show() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const getStudent = async () => {
+      // Create environment variable for accessing api
       const res = await fetch("http://localhost:5000/student");
       const getdata = await res.json();
       setData(getdata);
@@ -14,8 +14,7 @@ function Show() {
     };
 
     getStudent();
-  },[]);
-
+  }, []);
 
   return (
     <React.Fragment>
@@ -25,7 +24,7 @@ function Show() {
             <h5 className="p-3 fw-bold text-white">
               Fetch Data from MYSQL Database in Reactjs
             </h5>
-          
+
             <table className="table table-bordered text-white">
               <thead>
                 <tr>
@@ -47,7 +46,7 @@ function Show() {
               </tbody>
             </table>
           </div>
-        </div>      
+        </div>
       </Container>
     </React.Fragment>
   );
