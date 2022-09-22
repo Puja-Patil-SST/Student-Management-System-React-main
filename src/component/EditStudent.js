@@ -32,6 +32,7 @@ export default function EditStudent(props) {
         //     return;
         // }
         // if(!/^[1-9][0-9]{9}$/.test(phone)) {
+        
         //     setPhone("")
         //     props.showAlert('Phone number should be only numbers and contain 10 digit', 'danger');
         //     return;
