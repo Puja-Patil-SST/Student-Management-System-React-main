@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Show() {
   const [data, setData] = useState([]);
@@ -40,6 +41,7 @@ function Show() {
                     <td>{getstud[0]}</td>
                     <td> {getstud[1]}</td>
                     <td> {getstud[2]}</td>
+
                     {/* <td><button href="" className="btn btn-success"> View </button> </td> */}
                   </tr>
                 ))}
